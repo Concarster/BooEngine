@@ -23,7 +23,7 @@ outputdir = "%{cfg.buildcfg}_%{cfg.system}_%{cfg.architecture}"
 
 -- Include directories relative to root folder (solution directory)
 IncludeDir = {}
---[[
+
 IncludeDir["GLFW"]     = "Mods/GLFW/include"
 IncludeDir["Glad"]     = "Mods/Glad/include"
 IncludeDir["ImGui"]    = "Mods/imgui"
@@ -31,15 +31,15 @@ IncludeDir["glm"]      = "Mods/glm"
 IncludeDir["SOIL2"]    = "Mods/SOIL2/incs"
 IncludeDir["GSL"]      = "Mods/GSL/include"
 IncludeDir["spdlog"]   = "Mods/spdlog/include"
-]]
+
 
 group "Dependencies"
---[[
+
 include "Mods/GLFW"
 include "Mods/Glad"
 include "Mods/imgui"
 include "Mods/SOIL2"
-]]
+
  group ""
 
 --[[ GLOBAL Precompiled Header   
@@ -69,7 +69,7 @@ project "BooEngine"
 
     includedirs {
         "%{prj.name}/src",
-        --[[
+     
         "%{IncludeDir.spdlog}",
         "%{IncludeDir.GLFW}",
         "%{IncludeDir.Glad}",
@@ -78,7 +78,7 @@ project "BooEngine"
         "%{IncludeDir.SOIL2}",
         "%{IncludeDir.GSL}",
         "%{IncludeDir.boost}",
-       ]]
+     
         "$(BOOST)"
     }
 
@@ -87,10 +87,10 @@ project "BooEngine"
     }
 
     links { 
-        --"GLFW",
-		--"Glad",
-	    --"ImGui",
-        --"SOIL2";
+        "GLFW",
+		"Glad",
+	    "ImGui",
+        "SOIL2";
 		"opengl32.lib"
 	}
 
@@ -142,7 +142,7 @@ project "BooGame"
 
         "BooEngine/src",
         "%{prj.name}/src",
-        --[[
+        
         "%{IncludeDir.spdlog}",
         "%{IncludeDir.GLFW}",
         "%{IncludeDir.Glad}",
@@ -150,7 +150,7 @@ project "BooGame"
         "%{IncludeDir.glm}",
         "%{IncludeDir.SOIL2}",
         "%{IncludeDir.GSL}",
-        ]]
+     
         "$(BOOST)"
     }
 

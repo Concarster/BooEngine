@@ -101,7 +101,7 @@
       <WarningLevel>Level3</WarningLevel>
       <DisableSpecificWarnings>4996;4251;%(DisableSpecificWarnings)</DisableSpecificWarnings>
       <PreprocessorDefinitions>BOO_ENGINE;BOO_WINDOW;BOO_BUILD_DLL;GLFW_INCLUDE_NONE;BOO_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>src;$(BOOST);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>src;..\Mods\spdlog\include;..\Mods\GLFW\include;..\Mods\Glad\include;..\Mods\imgui;..\Mods\glm;..\Mods\SOIL2\incs;..\Mods\GSL\include;..;$(BOOST);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <Optimization>Disabled</Optimization>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
@@ -126,7 +126,7 @@
       <WarningLevel>Level3</WarningLevel>
       <DisableSpecificWarnings>4996;4251;%(DisableSpecificWarnings)</DisableSpecificWarnings>
       <PreprocessorDefinitions>BOO_ENGINE;BOO_WINDOW;BOO_BUILD_DLL;GLFW_INCLUDE_NONE;BOO_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>src;$(BOOST);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>src;..\Mods\spdlog\include;..\Mods\GLFW\include;..\Mods\Glad\include;..\Mods\imgui;..\Mods\glm;..\Mods\SOIL2\incs;..\Mods\GSL\include;..;$(BOOST);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <Optimization>Disabled</Optimization>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
@@ -151,7 +151,7 @@
       <WarningLevel>Level3</WarningLevel>
       <DisableSpecificWarnings>4996;4251;%(DisableSpecificWarnings)</DisableSpecificWarnings>
       <PreprocessorDefinitions>BOO_ENGINE;BOO_WINDOW;BOO_BUILD_DLL;GLFW_INCLUDE_NONE;BOO_RELEASE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>src;$(BOOST);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>src;..\Mods\spdlog\include;..\Mods\GLFW\include;..\Mods\Glad\include;..\Mods\imgui;..\Mods\glm;..\Mods\SOIL2\incs;..\Mods\GSL\include;..;$(BOOST);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <Optimization>Full</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
@@ -180,7 +180,7 @@
       <WarningLevel>Level3</WarningLevel>
       <DisableSpecificWarnings>4996;4251;%(DisableSpecificWarnings)</DisableSpecificWarnings>
       <PreprocessorDefinitions>BOO_ENGINE;BOO_WINDOW;BOO_BUILD_DLL;GLFW_INCLUDE_NONE;BOO_RELEASE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>src;$(BOOST);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>src;..\Mods\spdlog\include;..\Mods\GLFW\include;..\Mods\Glad\include;..\Mods\imgui;..\Mods\glm;..\Mods\SOIL2\incs;..\Mods\GSL\include;..;$(BOOST);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <Optimization>Full</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
@@ -214,6 +214,20 @@
     <ClCompile Include="src\booPCH.cpp">
       <PrecompiledHeader>Create</PrecompiledHeader>
     </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Mods\GLFW\GLFW.vcxproj">
+      <Project>{154B857C-0182-860D-AA6E-6C109684020F}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Mods\Glad\Glad.vcxproj">
+      <Project>{BDD6857C-A90D-870D-52FA-6C103E10030F}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Mods\imgui\ImGui.vcxproj">
+      <Project>{C0FF640D-2C14-8DBE-F595-301E616989EF}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Mods\SOIL2\SOIL2.vcxproj">
+      <Project>{6E84090E-DA98-31BF-A31A-D51E0FEE2DF0}</Project>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

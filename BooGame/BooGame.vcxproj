@@ -100,7 +100,7 @@
       <WarningLevel>Level3</WarningLevel>
       <DisableSpecificWarnings>4996;4251;%(DisableSpecificWarnings)</DisableSpecificWarnings>
       <PreprocessorDefinitions>BOO_ENGINE;BOO_WINDOW;BOO_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>..\BooEngine\src;src;$(BOOST);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\BooEngine\src;src;..\Mods\spdlog\include;..\Mods\GLFW\include;..\Mods\Glad\include;..\Mods\imgui;..\Mods\glm;..\Mods\SOIL2\incs;..\Mods\GSL\include;$(BOOST);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <Optimization>Disabled</Optimization>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
@@ -120,7 +120,7 @@
       <WarningLevel>Level3</WarningLevel>
       <DisableSpecificWarnings>4996;4251;%(DisableSpecificWarnings)</DisableSpecificWarnings>
       <PreprocessorDefinitions>BOO_ENGINE;BOO_WINDOW;BOO_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>..\BooEngine\src;src;$(BOOST);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\BooEngine\src;src;..\Mods\spdlog\include;..\Mods\GLFW\include;..\Mods\Glad\include;..\Mods\imgui;..\Mods\glm;..\Mods\SOIL2\incs;..\Mods\GSL\include;$(BOOST);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <Optimization>Disabled</Optimization>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
@@ -140,7 +140,7 @@
       <WarningLevel>Level3</WarningLevel>
       <DisableSpecificWarnings>4996;4251;%(DisableSpecificWarnings)</DisableSpecificWarnings>
       <PreprocessorDefinitions>BOO_ENGINE;BOO_WINDOW;BOO_RELEASE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>..\BooEngine\src;src;$(BOOST);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\BooEngine\src;src;..\Mods\spdlog\include;..\Mods\GLFW\include;..\Mods\Glad\include;..\Mods\imgui;..\Mods\glm;..\Mods\SOIL2\incs;..\Mods\GSL\include;$(BOOST);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <Optimization>Full</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
@@ -164,7 +164,7 @@
       <WarningLevel>Level3</WarningLevel>
       <DisableSpecificWarnings>4996;4251;%(DisableSpecificWarnings)</DisableSpecificWarnings>
       <PreprocessorDefinitions>BOO_ENGINE;BOO_WINDOW;BOO_RELEASE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>..\BooEngine\src;src;$(BOOST);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\BooEngine\src;src;..\Mods\spdlog\include;..\Mods\GLFW\include;..\Mods\Glad\include;..\Mods\imgui;..\Mods\glm;..\Mods\SOIL2\incs;..\Mods\GSL\include;$(BOOST);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <Optimization>Full</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>

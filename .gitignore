@@ -39,6 +39,7 @@ BK/
 
 # Files
 *.user
+*.gitignore
 
 # Comfigurations
 *.ini
