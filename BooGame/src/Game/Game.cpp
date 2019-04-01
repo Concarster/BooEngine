@@ -16,12 +16,11 @@ void Game::Init()
 
 void Game::InitSystem()
 {
-    GetLog();
+    InitLogger();
 }
 
-void Game::GetLog()
+void Game::InitLogger()
 {
-    boo::Log::Init();
     BOO_ENGINE_INFO("Welcome To BooEr Engine!");
     BOO_ENGINE_WARN("Initializing BooEr Logger!");
     BOO_ENGINE_TRACE("BooEr Logger Initialized!");

@@ -9,7 +9,7 @@ public:
 
     void Init();
     void InitSystem();
-    void GetLog();
+    void InitLogger();
 
 };
 

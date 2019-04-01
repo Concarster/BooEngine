@@ -8,6 +8,9 @@ extern boo::Engine* boo::Generate();
 
 int main(int argc, char** argv)
 {
+    /*Initialize Logger System*/
+    boo::Log::Init();
+
     auto game = boo::Generate();
     game->Begin();
     delete game;
