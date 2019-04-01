@@ -10,6 +10,8 @@ namespace boo
         ~Engine();
 
         void Begin();
+
+        void EventInCategory();
     };
 
     /*For Clients */
