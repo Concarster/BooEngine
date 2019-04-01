@@ -205,6 +205,12 @@
   <ItemGroup>
     <ClInclude Include="src\Define.h" />
     <ClInclude Include="src\Engine\Engine.h" />
+    <ClInclude Include="src\Engine\Events\AppEvent.h" />
+    <ClInclude Include="src\Engine\Events\Event.h" />
+    <ClInclude Include="src\Engine\Events\KeyEvent.h" />
+    <ClInclude Include="src\Engine\Events\MouseEvent.h" />
+    <ClInclude Include="src\Engine\Util\ApiCode.h" />
+    <ClInclude Include="src\Engine\Util\Log.h" />
     <ClInclude Include="src\ForClient.h" />
     <ClInclude Include="src\Main.h" />
     <ClInclude Include="src\booPCH.h" />
@@ -214,6 +220,7 @@
     <ClCompile Include="src\booPCH.cpp">
       <PrecompiledHeader>Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="src\Engine\Util\Log.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Mods\GLFW\GLFW.vcxproj">

@@ -7,5 +7,9 @@ public:
     Game();
     ~Game();
 
+    void Init();
+    void InitSystem();
+    void GetLog();
+
 };
 

@@ -13,8 +13,6 @@ namespace boo
 
     void Engine::Begin()
     {
-        std::cout << "\n  Engine Begin!  \n" << std::endl;
-
         while (true)
         {
 
