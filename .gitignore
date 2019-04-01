@@ -30,3 +30,16 @@
 *.exe
 *.out
 *.app
+
+# Directories
+.vs/
+bin/
+bint/
+BK/
+
+# Files
+*.user
+
+# Comfigurations
+*.ini
+*.bat
