@@ -1,6 +1,7 @@
 #include "booPCH.h"
 #include "Engine.h"
 #include "Events\AppEvent.h"
+#include "InputMgr.h"
 
 #include <glad\glad.h>
 
@@ -8,9 +9,14 @@ namespace boo
 {
 #define BIND_EVENT_FN(x) std::bind(&Engine::x, this, std::placeholders::_1)
 
+    Engine* Engine::s_Instance = nullptr;
+
     Engine::Engine()
         :m_Running(true)
     {
+        BOO_ENGINE_ASSERT(!s_Instance, "App already exists!");
+        s_Instance = this;
+
         m_Window = std::unique_ptr<Window>(Window::Create());
         m_Window->SetEventCallBack(BIND_EVENT_FN(OnEvent));
     }
@@ -21,7 +27,7 @@ namespace boo
 
     void Engine::Begin()
     {
-        EventInCategory();
+        //EventInCategory();
 
         while (m_Running)
         {
@@ -30,6 +36,8 @@ namespace boo
 
             for (Layer* layer : m_LayerStack)
                 layer->OnUpdate();
+
+            //ToPrintMousePos();
 
             m_Window->OnUpdate();
         }
@@ -81,6 +89,12 @@ namespace boo
     void Engine::ToPrintEvent(Event & onEvent)
     {
         BOO_ENGINE_TRACE("{0}", onEvent);
+    }
+
+    void Engine::ToPrintMousePos()
+    {
+        auto[x, y] = InputMgr::GetMousePosition();
+        BOO_ENGINE_TRACE("X: {0}, Y: {1}", x, y);
     }
 
     bool Engine::OnWindowClosed(WindowCloseEvent & closeEvent)

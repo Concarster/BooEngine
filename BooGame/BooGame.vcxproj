@@ -183,8 +183,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="src\Game\LayerList.h" />
     <ClInclude Include="src\Game\Game.h" />
+    <ClInclude Include="src\Game\LayerList.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Game\Game.cpp" />

@@ -10,11 +10,14 @@ namespace boo
     class BOO_API Engine
     {
     private:
+       
         bool m_Running;
         /* uqPtr Platform Indepedent */
         std::unique_ptr<Window> m_Window;
 
         LayerStack m_LayerStack;
+
+        static Engine* s_Instance;
 
     public:
         Engine();
@@ -30,8 +33,16 @@ namespace boo
 
         void PushOverLay(Layer* overlay);
 
+        inline static Engine& GetInstance() { return *s_Instance; }
+
+        /*Get a windows ptr*/
+        inline Window& GetWindow() { return *m_Window; }
+
         /* Helper Fuction to get Events*/
         void ToPrintEvent(Event & onEvent);
+
+        /* Helper Fuction to Print Mouse Position*/
+        void ToPrintMousePos();
 
     private:
         bool OnWindowClosed(WindowCloseEvent& closeEvent);
