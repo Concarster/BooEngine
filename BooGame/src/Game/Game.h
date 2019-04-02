@@ -1,5 +1,6 @@
 #pragma once
-#include <ForClient.h>
+#include "Main.h"
+#include "ForClient.h"
 
 class Game : public boo::Engine
 {

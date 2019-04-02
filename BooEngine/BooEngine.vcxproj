@@ -209,6 +209,8 @@
     <ClInclude Include="src\Engine\Events\Event.h" />
     <ClInclude Include="src\Engine\Events\KeyEvent.h" />
     <ClInclude Include="src\Engine\Events\MouseEvent.h" />
+    <ClInclude Include="src\Engine\Layers\Layer.h" />
+    <ClInclude Include="src\Engine\Layers\LayerStack.h" />
     <ClInclude Include="src\Engine\Util\ApiCode.h" />
     <ClInclude Include="src\Engine\Util\Log.h" />
     <ClInclude Include="src\ForClient.h" />
@@ -222,6 +224,8 @@
     <ClCompile Include="src\booPCH.cpp">
       <PrecompiledHeader>Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="src\Engine\Layers\Layer.cpp" />
+    <ClCompile Include="src\Engine\Layers\LayerStack.cpp" />
     <ClCompile Include="src\Engine\Util\Log.cpp" />
     <ClCompile Include="src\Engine\Platform\Windows\Wwindow.cpp" />
   </ItemGroup>

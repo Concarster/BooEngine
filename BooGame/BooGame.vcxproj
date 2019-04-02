@@ -183,6 +183,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="src\Game\LayerList.h" />
     <ClInclude Include="src\Game\Game.h" />
   </ItemGroup>
   <ItemGroup>

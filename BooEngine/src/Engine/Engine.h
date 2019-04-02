@@ -3,6 +3,7 @@
 #include "Window.h"
 #include "Events\Event.h"
 #include "Events\AppEvent.h"
+#include "Engine\Layers\LayerStack.h"
 
 namespace boo
 {
@@ -13,6 +14,8 @@ namespace boo
         /* uqPtr Platform Indepedent */
         std::unique_ptr<Window> m_Window;
 
+        LayerStack m_LayerStack;
+
     public:
         Engine();
         ~Engine();
@@ -22,6 +25,10 @@ namespace boo
         void OnEvent(Event& onEvent);
 
         void EventInCategory();
+
+        void PushLayer(Layer* layer);
+
+        void PushOverLay(Layer* overlay);
 
         /* Helper Fuction to get Events*/
         void ToPrintEvent(Event & onEvent);

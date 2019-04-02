@@ -1,4 +1,5 @@
 #include "Game.h"
+#include "LayerList.h"
 
 Game::Game()
 {
@@ -17,6 +18,7 @@ void Game::Init()
 void Game::InitSystem()
 {
     InitLogger();
+    PushLayer(new ImgLayer());
 }
 
 void Game::InitLogger()

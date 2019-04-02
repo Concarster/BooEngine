@@ -21,6 +21,8 @@
     <ClInclude Include="src\Engine\Events\MouseEvent.h" />
     <ClInclude Include="src\Engine\Window.h" />
     <ClInclude Include="src\Engine\Platform\Windows\Wwindow.h" />
+    <ClInclude Include="src\Engine\Layers\Layer.h" />
+    <ClInclude Include="src\Engine\Layers\LayerStack.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Engine\Engine.cpp">
@@ -29,5 +31,7 @@
     <ClCompile Include="src\booPCH.cpp" />
     <ClCompile Include="src\Engine\Util\Log.cpp" />
     <ClCompile Include="src\Engine\Platform\Windows\Wwindow.cpp" />
+    <ClCompile Include="src\Engine\Layers\Layer.cpp" />
+    <ClCompile Include="src\Engine\Layers\LayerStack.cpp" />
   </ItemGroup>
 </Project>

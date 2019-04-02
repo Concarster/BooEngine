@@ -28,6 +28,9 @@ namespace boo
             glClearColor(0.0f, 0.0f, 0.4f, 1.0f);
             glClear(GL_COLOR_BUFFER_BIT);
 
+            for (Layer* layer : m_LayerStack)
+                layer->OnUpdate();
+
             m_Window->OnUpdate();
         }
     }
@@ -38,6 +41,13 @@ namespace boo
         distpatcher.Dispatch<WindowCloseEvent>(BIND_EVENT_FN(OnWindowClosed));
 
         //ToPrintEvent(onEvent);
+
+        for (auto iterate = m_LayerStack.end(); iterate != m_LayerStack.begin(); )
+        {
+            (*--iterate)->OnEvent(onEvent);
+            if (onEvent.Handled)
+                break;
+        }
     }
 
     void Engine::EventInCategory()
@@ -54,6 +64,18 @@ namespace boo
             BOO_ENGINE_TRACE(winEvent);
         }
         
+    }
+
+    void Engine::PushLayer(Layer * layer)
+    {
+        m_LayerStack.PushLayer(layer);
+        layer->OnAttach();
+    }
+
+    void Engine::PushOverLay(Layer * overlay)
+    {
+        m_LayerStack.PushOverlay(overlay);
+        overlay->OnAttach();
     }
 
     void Engine::ToPrintEvent(Event & onEvent)
