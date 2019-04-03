@@ -11,6 +11,5 @@ public:
     void Init();
     void InitSystem();
     void InitLogger();
-
 };
 

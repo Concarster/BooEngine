@@ -97,6 +97,7 @@ namespace boo
         BOO_ENGINE_TRACE("X: {0}, Y: {1}", x, y);
     }
 
+
     bool Engine::OnWindowClosed(WindowCloseEvent & closeEvent)
     {
         m_Running = false;
