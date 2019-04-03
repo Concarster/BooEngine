@@ -19,7 +19,8 @@ void Game::InitSystem()
 {
     InitLogger();
     //PushLayer(new ImgLayer());
-    PushLayer(new KeyCodeLayer());
+    //PushLayer(new KeyCodeLayer());
+    PushLayer(new MathLayer());
 }
 
 void Game::InitLogger()
